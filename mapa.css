@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ 
+body {
+    background-color: #f8f7f1;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #52635b;
+}
+
+
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 5% 60px;
+}
+
+
+.cabecalho {
+    text-align: center;
+    padding: 8px 0 34px;
+}
+
+.cabecalho h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: bold;
+    color: #176747;
+    margin-bottom: 12px;
+}
+
+.cabecalho p {
+    font-size: 16px;
+    color: #77766f;
+}
+
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 2fr 0.9fr;
+    gap: 30px;
+    align-items: stretch;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+
+.mapa {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: #e5eadc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.mapa img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.legenda {
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background-color: #ffffff;
+    padding: 13px 18px;
+    border-radius: 8px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.10);
+    font-size: 13px;
+    color: #385347;
+}
+
+.bolinha {
+    width: 10px;
+    height: 10px;
+    background-color: #176747;
+    border-radius: 50%;
+}
+
+
+.painel {
+    background-color: #fffdf8;
+    border: 1px solid #e8e4d9;
+    border-radius: 6px;
+    padding: 40px 28px;
+    min-height: 600px;
+}
+
+.etiqueta {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #a49b47;
+    display: block;
+    margin-bottom: 22px;
+}
+
+.painel h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 32px;
+    color: #176747;
+    margin-bottom: 20px;
+}
+
+.painel p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #77766f;
+}
+
+
+@media (max-width: 800px) {
+
+    .pagina {
+        padding: 0 20px 40px;
+    }
+
+    .cabecalho {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .cabecalho h1 {
+        font-size: 43px;
+    }
+
+    .cabecalho p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .conteudo {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mapa {
+        height: 400px;
+    }
+
+    .painel {
+        min-height: auto;
+        padding: 30px 24px;
+    }
+
+    .painel h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .cabecalho h1 {
+        font-size: 36px;
+    }
+
+    .mapa {
+        height: 320px;
+    }
+}
